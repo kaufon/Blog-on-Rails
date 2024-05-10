@@ -1,22 +1,32 @@
-<h1><%= @article.title %></h1>
+
+<%= render "layouts/navbar" %>
+
+<div class = "flex justify-center w-3/5 overflow-hidden">
+<h1 class = "flex justify-center text-3xl w-1/4 mt-2 whitespace-nowrap"><%= @article.title %></h1>
+</div>
+<div class = "flex justify-center ">
+<p class="border mt-5 w-2/4 rounded-md border-black p-2 break-words">
+  <%= @article.body %>
+</p>
+
+</div>
+
+<div class="flex justify-center w-3/5 mt-4">
+  <h1 class="text-2xl w-1/4 mt-2">Comments</h1>
+</div>
+<div class="flex justify-center mt-4">
+  <div class="flex flex-col justify-center text-base w-2/4 mt-2 border-black rounded-lg border p-2 break-words">
+    <%= render @article.comments %>
+  </div>
+</div>
 
 
-<p><%= @article.body %></p>
-
-<ul>
-    <li><%= link_to  "Edit", edit_article_path(@article) %></li>
-    <li><%= link_to  "Delete", article_path(@article),data: {
-        turbo_method: :delete,
-        turbo_confirm: "Are you sure?"
-        } %></li>
-
-</ul>
-
-<h2>Comments</h2>
-<%= render @article.comments %>
 
 
 
-
-<h2>Add a comment</h2>
+<div class="flex justify-center w-3/5 mt-4">
+  <h1 class="text-2xl w-1/4 mt-2">Post a comment</h1>
+</div>
+<div class = "flex justify-center mt-4">
 <%= render "comments/form" %>
+</div>

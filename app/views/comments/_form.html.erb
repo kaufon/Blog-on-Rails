@@ -1,13 +1,13 @@
 <%= form_with model: [@article, @article.comments.build] do |form| %>
-<p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
+<p class>
+    <%= form.label :username,class:  "border" %><br>
+    <%= form.text_field :commenter,class: "border border-green-500 " %>
 </p>
 <p>
-    <%= form.label :body %><br>
+    <%= form.label :comment %><br>
     <%= form.text_area :body %>
 </p>
-<p>
+<button class = "border bg-black text-white rounded-md flex justify-center p-2 mx-10">
     <%= form.submit %>
-</p>
+</button>
 <% end %>
