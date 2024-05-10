@@ -2,10 +2,10 @@
 <%= render "layouts/navbar" %>
 
 <div class = "flex justify-center w-3/5 overflow-hidden">
-<h1 class = "flex justify-center text-3xl w-1/4 mt-2 whitespace-nowrap"><%= @article.title %></h1>
+<h1 class = "flex justify-center text-4xl w-1/4 mt-2 whitespace-nowrap"><%= @article.title %></h1>
 </div>
 <div class = "flex justify-center ">
-<p class="border mt-5 w-2/4 rounded-md border-black p-2 break-words">
+<p class="border mt-5 w-2/4 rounded-md border-black p-2 break-words bg-white">
   <%= @article.body %>
 </p>
 
@@ -15,7 +15,7 @@
   <h1 class="text-2xl w-1/4 mt-2">Comments</h1>
 </div>
 <div class="flex justify-center mt-4">
-  <div class="flex flex-col justify-center text-base w-2/4 mt-2 border-black rounded-lg border p-2 break-words">
+  <div class="flex flex-col justify-center text-base w-2/4 mt-2 border-black rounded-lg border p-2 break-words bg-white">
     <%= render @article.comments %>
   </div>
 </div>

@@ -1,13 +1,24 @@
-<h1 class = "text-green-400 text-3xl" >Articles</h1>
-
+<div class="w-full px-8 flex justify-center border p-5 bg-gray-500">
+  <h1 class = "text-white text-3xl font-black" >Plebbit</h1>
+  <%= image_tag '' %>
+</div>
+<div class = "flex">
+  <h1 class = "text-3xl text-center w-1/2 italic mt-2">Articles</h1>
+</div>
+<div class = "flex justify-center">
+<div class = "border border-black text-left w-1/2 p-2 rounded-md">
 <ul>
     
     <% @article.each do |article| %>
       <li>
-          <%= link_to  article.title, article %>
+          <%= link_to  article.title, article ,class: "text-1xl font-black mx-2"%>
       </li>
     <% end %>
 </ul>
-<div class = "border ">
-<%= link_to  "Create your article too!", new_article_path %>
+</div>
+</div>
+<div class = "flex justify-center">
+  <div class = "flex justify-end w-1/2" >
+  <button class = "border bg-black text-white rounded-lg p-2 flex mt-2"><%= link_to  "Create your article too!", new_article_path %></button>
+  </div>
 </div>

@@ -1,7 +1,7 @@
 <%= form_with model: [@article, @article.comments.build] do |form| %>
 <p class>
-    <%= form.label :username,class:  "border" %><br>
-    <%= form.text_field :commenter,class: "border border-green-500 " %>
+    <%= form.label :username%><br>
+    <%= form.text_field :commenter%>
 </p>
 <p>
     <%= form.label :comment %><br>

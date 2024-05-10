@@ -1,19 +1,24 @@
 <%= form_with model: article do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title%>
+  <div class = "flex justify-center">
+    <%= form.label :title ,class: "mt-2 mx-2 font-black"%>
+    <%= form.text_field :title,class: %>
     <%= article.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
-  <div>
-    <%= form.label :body %><br>
+  <div class = "flex justify-center mt-2">
+    <%= form.label :Text,class:"mt-3 mx-2 font-black"  %><br>
     <%= form.text_area :body %>
     <%= article.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
-  <div>
+  <div class = "flex justify-center mt-5">
+  <button class = "p-3 rounded-md text-sm font-medium text-white bg-black mx-5">
     <%= form.submit %>
+  </button>
+  <button>
+    <%= link_to  "Cancelar", root_path,class: " rounded-md text-sm font-medium text-white bg-red-500 p-3" %>
+  </button>
   </div>
 <% end %>
